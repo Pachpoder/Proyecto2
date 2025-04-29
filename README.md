@@ -1,62 +1,66 @@
-ToDo List & Goals Manager
-Aplicación web desarrollada en React + React Bootstrap para la gestión de tareas y metas personales.
+# ToDo List & Goals Manager
+
+Aplicación web desarrollada en **React** + **React Bootstrap** para la gestión de tareas y metas personales.  
 Permite agregar, visualizar y eliminar tareas o metas, separadas por secciones.
 
-🚀 Tecnologías utilizadas
-React 19
+---
 
-React Bootstrap
+## 🚀 Tecnologías utilizadas
 
-Bootstrap 5
+- React 19
+- React Bootstrap
+- Bootstrap 5
+- CSS3
 
-CSS3
+---
 
-🎯 Funcionalidades
-Agregar tareas y metas personales.
+## 🎯 Funcionalidades
 
-Separación de secciones: Tasks y Goals.
+- Agregar tareas y metas personales.
+- Separación de secciones: Tasks y Goals.
+- Eliminación de tareas y metas dinámicamente.
+- Interfaz responsive (adaptable a mobile y desktop).
+- Menú de navegación con colapso en dispositivos móviles.
 
-Eliminación de tareas y metas dinámicamente.
+---
 
-Interfaz responsive (adaptable a mobile y desktop).
+## 📂 Instalación del proyecto localmente
 
-Menú de navegación con colapso en dispositivos móviles.
+### 1. Clona el repositorio:
 
-📂 Instalación del proyecto localmente
-Clona el repositorio:
+```bash
+git clone https://github.com/Pachpoder/Proyecto2.git
+```
 
-bash
-Copy
-Edit
-git clone (url github)
-Entra en la carpeta del proyecto:
+### 2. Entra en la carpeta del proyecto:
 
-bash
-Copy
-Edit
+```bash
 cd nombre-de-tu-carpeta
-Instala las dependencias:
+```
 
-bash
-Copy
-Edit
+### 3. Instala las dependencias:
+
+```bash
 npm install
-Corre la aplicación:
+```
 
-bash
-Copy
-Edit
+### 4. Corre la aplicación:
+
+```bash
 npm start
-Abre tu navegador en:
+```
 
-arduino
-Copy
-Edit
+### 5. Abre tu navegador en:
+
+```bash
 http://localhost:3000
-📦 Estructura de carpetas
-bash
-Copy
-Edit
+```
+
+---
+
+## 📦 Estructura de carpetas
+
+```bash
 /src
   /components
     /Cards
@@ -70,17 +74,33 @@ Edit
   - App.css
   - index.js
   - index.css
-🌐 Links importantes
-Playcode.io: https://2361337.playcode.io/
+```
 
-Repositorio GitHub: Enlace al repositorio
+---
 
+## 🌐 Links importantes
 
-📜 Notas adicionales
-Todos los estilos fueron aplicados utilizando archivos .css separados, siguiendo las buenas prácticas.
+- **Playcode.io**: [Ver proyecto en Playcode](https://2361337.playcode.io/)
+- **Repositorio GitHub**: [Ver repositorio en GitHub](https://github.com/Pachpoder/Proyecto2)
 
-No se utilizaron estilos inline.
+---
 
-El proyecto fue creado utilizando Create React App.
+## 📜 Notas adicionales
 
-🎉 ¡Proyecto Finalizado!
+- Todos los estilos fueron aplicados utilizando archivos `.css` separados, siguiendo las buenas prácticas.
+- No se utilizaron estilos inline.
+- El proyecto fue creado utilizando **Create React App**.
+
+---
+
+# 🎉 ¡Proyecto Finalizado!
+
+---
+
+# 🚀 Comandos para subir el README.md corregido:
+
+```bash
+git add README.md
+git commit -m "Actualización de README.md: documentación estructurada y formato profesional para entrega"
+git push
+```
