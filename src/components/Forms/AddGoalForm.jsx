@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
-const AddGoalForm = ({ onAddGoal, sectionName }) => {
+const AddGoalForm = ({ onAddGoal }) => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -19,6 +19,7 @@ const AddGoalForm = ({ onAddGoal, sectionName }) => {
 
     onAddGoal(newItem);
 
+    // limpiar formulario
     setName('');
     setDescription('');
     setDueDate('');
@@ -26,41 +27,39 @@ const AddGoalForm = ({ onAddGoal, sectionName }) => {
 
   return (
     <Form onSubmit={handleSubmit} className="p-3 border rounded bg-light">
-      <h4 className="mb-4 text-center">
-        Add a {sectionName === 'tasks' ? 'Task' : 'Goal'}
-      </h4>
+      <h4 className="mb-4 text-center">Agregar Tarea</h4>
 
       <Form.Group className="mb-3" controlId="formName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control 
-          type="text" 
-          placeholder="Enter name" 
+        <Form.Label>Nombre</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Ingrese nombre"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formDescription">
-        <Form.Label>Description</Form.Label>
-        <Form.Control 
-          type="text" 
-          placeholder="Enter description" 
+        <Form.Label>Descripción</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Ingrese descripción"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formDueDate">
-        <Form.Label>Due Date</Form.Label>
-        <Form.Control 
-          type="date" 
+        <Form.Label>Fecha Límite</Form.Label>
+        <Form.Control
+          type="date"
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
         />
       </Form.Group>
 
       <Button variant="primary" type="submit" className="w-100">
-        Add {sectionName === 'tasks' ? 'Task' : 'Goal'}
+        Agregar
       </Button>
     </Form>
   );

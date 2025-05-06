@@ -2,45 +2,31 @@ import { Container, Row, Col } from 'react-bootstrap';
 import CustomNavbar from './components/Navbar/Navbar';
 import { CustomCard } from './components/Cards/CustomCard';
 import AddGoalForm from './components/Forms/AddGoalForm';
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTask, removeTask } from './redux/taskSlice';
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-  const [goals, setGoals] = useState([]);
-  const [currentSection, setCurrentSection] = useState('tasks'); // tasks o goals
+  const tasks = useSelector((state) => state.tasks);
+  const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
-    if (currentSection === 'tasks') {
-      setTasks([...tasks, item]);
-    } else {
-      setGoals([...goals, item]);
-    }
+    dispatch(addTask(item));
   };
 
   const handleRemoveItem = (id) => {
-    if (currentSection === 'tasks') {
-      setTasks(tasks.filter((task) => task.id !== id));
-    } else {
-      setGoals(goals.filter((goal) => goal.id !== id));
-    }
+    dispatch(removeTask(id));
   };
-
-  const handleSelectSection = (section) => {
-    setCurrentSection(section);
-  };
-
-  const itemsToRender = currentSection === 'tasks' ? tasks : goals;
 
   return (
     <div className="App">
-      <CustomNavbar onSelectSection={handleSelectSection} />
+      <CustomNavbar />
       <Container className="mt-4">
         <Row>
           <Col md={4}>
-            <AddGoalForm onAddGoal={handleAddItem} sectionName={currentSection} />
+            <AddGoalForm onAddGoal={handleAddItem} />
           </Col>
           <Col md={8}>
-            {itemsToRender.map((item) => (
+            {tasks.map((item) => (
               <CustomCard
                 key={item.id}
                 id={item.id}

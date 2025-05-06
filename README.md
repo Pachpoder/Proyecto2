@@ -1,30 +1,31 @@
-# ToDo List & Goals Manager
+# ToDo List - React + Redux Toolkit 
 
-Aplicación web desarrollada en **React** + **React Bootstrap** para la gestión de tareas y metas personales.  
-Permite agregar, visualizar y eliminar tareas o metas, separadas por secciones.
+Aplicación web desarrollada con **React** y **Redux Toolkit** para gestionar tareas personales de forma dinámica.  
+Forma parte de la **Actividad Unidad II** y se enfoca únicamente en el manejo de estados usando Redux.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - React 19
+- Redux Toolkit
 - React Bootstrap
 - Bootstrap 5
 - CSS3
 
 ---
 
-## 🎯 Funcionalidades
+## Funcionalidades
 
-- Agregar tareas y metas personales.
-- Separación de secciones: Tasks y Goals.
-- Eliminación de tareas y metas dinámicamente.
-- Interfaz responsive (adaptable a mobile y desktop).
-- Menú de navegación con colapso en dispositivos móviles.
+- Agregar tareas personales con nombre, descripción y fecha límite.
+- Eliminar tareas desde el listado.
+- Manejo de estado centralizado usando Redux Toolkit.
+- Sin persistencia de datos (al recargar, las tareas desaparecen).
+- Interfaz responsive y amigable para desktop y móvil.
 
 ---
 
-## 📂 Instalación del proyecto localmente
+## Instalación del proyecto localmente
 
 ### 1. Clona el repositorio:
 
@@ -35,7 +36,7 @@ git clone https://github.com/Pachpoder/Proyecto2.git
 ### 2. Entra en la carpeta del proyecto:
 
 ```bash
-cd nombre-de-tu-carpeta
+cd Proyecto2
 ```
 
 ### 3. Instala las dependencias:
@@ -58,7 +59,7 @@ http://localhost:3000
 
 ---
 
-## 📦 Estructura de carpetas
+## Estructura del proyecto
 
 ```bash
 /src
@@ -70,37 +71,30 @@ http://localhost:3000
       - AddGoalForm.jsx
     /Navbar
       - Navbar.jsx
+  /redux
+    - store.js
+    - taskSlice.js
   - App.js
-  - App.css
   - index.js
   - index.css
 ```
 
 ---
 
-## 🌐 Links importantes
+## Redux Toolkit: organización
 
-- **Playcode.io**: [Ver proyecto en Playcode](https://2361337.playcode.io/)
-- **Repositorio GitHub**: [Ver repositorio en GitHub](https://github.com/Pachpoder/Proyecto2)
-
----
-
-## 📜 Notas adicionales
-
-- Todos los estilos fueron aplicados utilizando archivos `.css` separados, siguiendo las buenas prácticas.
-- No se utilizaron estilos inline.
-- El proyecto fue creado utilizando **Create React App**.
+- `taskSlice.js`: Contiene el slice con los reducers `addTask` y `removeTask`.
+- `store.js`: Configuración del store global.
+- `App.js`: Usa `useSelector` y `useDispatch` para conectarse al estado global.
 
 ---
 
-# 🎉 ¡Proyecto Finalizado!
+## Notas adicionales
+
+- Esta versión **no utiliza base de datos ni backend**.
+- Todos los estilos están aplicados mediante archivos `.css`, sin estilos inline.
+- La lógica cumple con los requerimientos de la **Actividad Unidad II**.
 
 ---
 
-# 🚀 Comandos para subir el README.md corregido:
-
-```bash
-git add README.md
-git commit -m "Actualización de README.md: documentación estructurada y formato profesional para entrega"
-git push
-```
+# ¡Proyecto listo para entrega!

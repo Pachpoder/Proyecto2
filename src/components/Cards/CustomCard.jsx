@@ -10,7 +10,7 @@ export const CustomCard = ({ id, name, description, dueDate, onRemove }) => {
         <Card.Text>{description}</Card.Text>
         <Card.Text><strong>Due Date:</strong> {dueDate}</Card.Text>
         <Button variant="danger" onClick={() => onRemove(id)}>
-          Remove
+          Eliminar
         </Button>
       </Card.Body>
     </Card>
