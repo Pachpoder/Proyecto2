@@ -1,100 +1,104 @@
-# ToDo List - React + Redux Toolkit 
 
-Aplicación web desarrollada con **React** y **Redux Toolkit** para gestionar tareas personales de forma dinámica.  
-Forma parte de la **Actividad Unidad II** y se enfoca únicamente en el manejo de estados usando Redux.
+# ToDo List Backend - Actividad 6
 
----
+Este es el backend de la aplicación ToDo List desarrollado con **Node.js + Express + MySQL**.
 
-## Tecnologías utilizadas
+## 🚀 Funcionalidades
+
+- CRUD completo para tareas (Tasks) y metas (Goals).
+- API protegida con API Key.
+- Conexión a base de datos MySQL.
+- Manejo de códigos de respuesta HTTP (200, 400, 401).
+- Integración completa con el frontend.
+
+## 🛠 Tecnologías
+
+- Node.js (LTS)
+- Express
+- MySQL
+- CORS
+
+## 📂 Instalación
+
+### 1️⃣ Clonar el repositorio
+
+git clone https://github.com/Pachpoder/backend-todoList.git
+cd backend-todoList
+
+### 2️⃣ Instalar dependencias
+
+npm install
+
+### 3️⃣ Configurar base de datos en `db.js` (ya configurado):
+
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'tu_password',
+  database: 'todo_app'
+});
+
+### 4️⃣ Iniciar el backend
+
+node server.js
+
+El backend quedará disponible en:
+
+http://localhost:3000
+
+## 🔐 API Key
+
+Para todas las peticiones debes enviar:
+
+Authorization: 12345-mi-apikey
+
+
+
+# ToDo List Frontend - Actividad 6
+
+Este es el frontend de la aplicación ToDo List desarrollado con **React + Redux Toolkit + Axios + React Bootstrap**.
+
+## 🚀 Funcionalidades
+
+- Agregar, eliminar y visualizar tareas (Tasks).
+- Agregar, eliminar y visualizar metas (Goals).
+- Consumo de API REST desde el backend.
+- Manejo de estados con Redux Toolkit.
+- UI responsive usando React Bootstrap.
+
+## 🛠 Tecnologías
 
 - React 19
 - Redux Toolkit
+- Axios
 - React Bootstrap
-- Bootstrap 5
-- CSS3
 
----
+## 📂 Instalación
 
-## Funcionalidades
+### 1️⃣ Clonar el repositorio
 
-- Agregar tareas personales con nombre, descripción y fecha límite.
-- Eliminar tareas desde el listado.
-- Manejo de estado centralizado usando Redux Toolkit.
-- Sin persistencia de datos (al recargar, las tareas desaparecen).
-- Interfaz responsive y amigable para desktop y móvil.
-
----
-
-## Instalación del proyecto localmente
-
-### 1. Clona el repositorio:
-
-```bash
 git clone https://github.com/Pachpoder/Proyecto2.git
-```
-
-### 2. Entra en la carpeta del proyecto:
-
-```bash
 cd Proyecto2
-```
 
-### 3. Instala las dependencias:
+### 2️⃣ Instalar dependencias
 
-```bash
 npm install
-```
 
-### 4. Corre la aplicación:
+### 3️⃣ Iniciar el frontend
 
-```bash
 npm start
-```
 
-### 5. Abre tu navegador en:
+El frontend quedará disponible en:
 
-```bash
+http://localhost:3001
+
+## 🔗 Conexión al backend
+
+El frontend realiza peticiones hacia:
+
 http://localhost:3000
-```
 
----
+Asegúrate que el backend esté ejecutándose antes de iniciar el frontend.
 
-## Estructura del proyecto
-
-```bash
-/src
-  /components
-    /Cards
-      - CustomCard.jsx
-      - CustomCard.css
-    /Forms
-      - AddGoalForm.jsx
-    /Navbar
-      - Navbar.jsx
-  /redux
-    - store.js
-    - taskSlice.js
-  - App.js
-  - index.js
-  - index.css
-```
-
----
-
-## Redux Toolkit: organización
-
-- `taskSlice.js`: Contiene el slice con los reducers `addTask` y `removeTask`.
-- `store.js`: Configuración del store global.
-- `App.js`: Usa `useSelector` y `useDispatch` para conectarse al estado global.
-
----
-
-## Notas adicionales
-
-- Esta versión **no utiliza base de datos ni backend**.
-- Todos los estilos están aplicados mediante archivos `.css`, sin estilos inline.
-- La lógica cumple con los requerimientos de la **Actividad Unidad II**.
-
----
-
-# ¡Proyecto listo para entrega!
+✅ Ambos proyectos deben ejecutarse en paralelo.
+✅ Esta entrega cubre la actividad completa de la Unidad VI (Docker no incluido).
