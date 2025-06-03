@@ -1,14 +1,14 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { deleteTask } from '../../redux/taskSlice';
+import { deleteGoal } from '../../redux/goalSlice';
 import './CustomCard.css';
 
-export const CustomCard = ({ id, name, description, dueDate }) => {
+export const CustomGoalCard = ({ id, name, description, dueDate }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(deleteTask(id));
+    dispatch(deleteGoal(id));
   };
 
   return (
